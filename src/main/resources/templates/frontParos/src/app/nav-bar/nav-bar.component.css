@@ -1,0 +1,46 @@
+nav {
+  margin: 0px;
+  list-style-type: none;
+  padding: 0px;
+}
+button {
+  margin: 4px;
+}
+.form-select {
+  width: 1px;
+}
+.sel {
+  color: #5e0612;
+  font-size: large;
+  text-decoration: none;
+  width: 185px;
+}
+.material-symbols-outlined {
+  width: 34px;
+  font-size: 35px;
+}
+.nav-container {
+  display: flex; /* Use flexbox to align items */
+  justify-content: flex-end; /* Align items to the right */
+}
+
+.nav-link {
+  /* Adjust padding or margin as needed */
+  margin-right: 10px; /* Add some space to the right of the link */
+  /* Other styles for the link */
+
+}
+/* src/styles.css */
+.list-inline {
+  margin-bottom: 0;
+  background-color: inherit; /* Ensures the background color is consistent */
+}
+
+.list-inline-item {
+  margin-right: 10px;
+}
+
+.form-select {
+  width: auto;
+}
+

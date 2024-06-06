@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real Estate Web App</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+      .hero-section,
+      .benefits-section,
+      .signup-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 50px;
+      }
+      .hero-content,
+      .benefits-content,
+      .signup-content {
+        max-width: 50%;
+      }
+      .hero-image,
+      .benefits-image,
+      .signup-image {
+        width: 50%;
+        background-color: #e0e0e0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .hero-image img,
+      .benefits-image img,
+      .signup-image img {
+        max-width: 100%;
+        height: auto;
+      }
+      .benefit-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .benefit-item img {
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1>Welcome to our Real Estate Platform PAROS</h1>
+        <p>Find your dream home with ease and convenience.</p>
+        <a routerLink="/About" class="btn btn-dark">About Us</a>
+
+      </div>
+      <div class="hero-image">
+        <img [src]="imageUrl" alt="Random Dog Image">
+
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+      <div class="benefits-content">
+        <h2>Discover the Benefits of Our Real Estate Web App</h2>
+        <p>
+          Save time, gain insights, and find your dream property with our
+          user-friendly web app.
+        </p>
+        <div class="benefit-item">
+          <img [src]="imageUrl" alt="Random Dog Image">
+
+          <div>
+            <h4>Time Savings</h4>
+            <p>
+              Our app streamlines the property search process, saving you
+              valuable time and effort.
+            </p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <img [src]="imageUrl" alt="Random Dog Image">
+
+          <div>
+            <h4>Detailed Analytics</h4>
+            <p>
+              Access comprehensive market data and analytics to make informed
+              decisions.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="benefits-image">
+        <img [src]="imageUrl" alt="Random Dog Image">
+
+      </div>
+    </section>
+
+    <!-- Signup Section -->
+    <section class="signup-section">
+      <div class="signup-content">
+        <h2>Find your dream home today</h2>
+        <p>
+          Sign up or login to access personalized features and property
+          listings.
+        </p>
+        <a routerLink="/SignUp" class="btn btn-dark">Sign Up</a>
+        <a routerLink="/Login" class="btn btn-light">Login</a>
+      </div>
+      <div class="signup-image">
+        <img [src]="imageUrl" alt="Random Dog Image">
+
+      </div>
+    </section>
+    <footer class="container-fluid bg-dark text-white py-5">
+      <div class="row">
+        <div class="col-md-3">
+          <h3>Contact</h3>
+          <p>For any inquiries, please fill out the form below.</p>
+          <a routerLink="" class="text-white">hello@relume.io</a>
+        </div>
+        <div class="col-md-3">
+          <h3>Follow Us</h3>
+          <div style="display: grid">
+            <a href="#" class="text-blue" >
+              <span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="35" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+</svg></span>
+            </a>
+            <a href="#"  >
+              <span>
+              <svg width="30px" height="35px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#paint0_radial_87_7153)"/>
+              <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#paint1_radial_87_7153)"/>
+              <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#paint2_radial_87_7153)"/>
+              <path d="M23 10.5C23 11.3284 22.3284 12 21.5 12C20.6716 12 20 11.3284 20 10.5C20 9.67157 20.6716 9 21.5 9C22.3284 9 23 9.67157 23 10.5Z" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M16 21C18.7614 21 21 18.7614 21 16C21 13.2386 18.7614 11 16 11C13.2386 11 11 13.2386 11 16C11 18.7614 13.2386 21 16 21ZM16 19C17.6569 19 19 17.6569 19 16C19 14.3431 17.6569 13 16 13C14.3431 13 13 14.3431 13 16C13 17.6569 14.3431 19 16 19Z" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M6 15.6C6 12.2397 6 10.5595 6.65396 9.27606C7.2292 8.14708 8.14708 7.2292 9.27606 6.65396C10.5595 6 12.2397 6 15.6 6H16.4C19.7603 6 21.4405 6 22.7239 6.65396C23.8529 7.2292 24.7708 8.14708 25.346 9.27606C26 10.5595 26 12.2397 26 15.6V16.4C26 19.7603 26 21.4405 25.346 22.7239C24.7708 23.8529 23.8529 24.7708 22.7239 25.346C21.4405 26 19.7603 26 16.4 26H15.6C12.2397 26 10.5595 26 9.27606 25.346C8.14708 24.7708 7.2292 23.8529 6.65396 22.7239C6 21.4405 6 19.7603 6 16.4V15.6ZM15.6 8H16.4C18.1132 8 19.2777 8.00156 20.1779 8.0751C21.0548 8.14674 21.5032 8.27659 21.816 8.43597C22.5686 8.81947 23.1805 9.43139 23.564 10.184C23.7234 10.4968 23.8533 10.9452 23.9249 11.8221C23.9984 12.7223 24 13.8868 24 15.6V16.4C24 18.1132 23.9984 19.2777 23.9249 20.1779C23.8533 21.0548 23.7234 21.5032 23.564 21.816C23.1805 22.5686 22.5686 23.1805 21.816 23.564C21.5032 23.7234 21.0548 23.8533 20.1779 23.9249C19.2777 23.9984 18.1132 24 16.4 24H15.6C13.8868 24 12.7223 23.9984 11.8221 23.9249C10.9452 23.8533 10.4968 23.7234 10.184 23.564C9.43139 23.1805 8.81947 22.5686 8.43597 21.816C8.27659 21.5032 8.14674 21.0548 8.0751 20.1779C8.00156 19.2777 8 18.1132 8 16.4V15.6C8 13.8868 8.00156 12.7223 8.0751 11.8221C8.14674 10.9452 8.27659 10.4968 8.43597 10.184C8.81947 9.43139 9.43139 8.81947 10.184 8.43597C10.4968 8.27659 10.9452 8.14674 11.8221 8.0751C12.7223 8.00156 13.8868 8 15.6 8Z" fill="white"/>
+              <defs>
+              <radialGradient id="paint0_radial_87_7153" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12 23) rotate(-55.3758) scale(25.5196)">
+              <stop stop-color="#B13589"/>
+              <stop offset="0.79309" stop-color="#C62F94"/>
+              <stop offset="1" stop-color="#8A3AC8"/>
+              </radialGradient>
+              <radialGradient id="paint1_radial_87_7153" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(11 31) rotate(-65.1363) scale(22.5942)">
+              <stop stop-color="#E0E8B7"/>
+              <stop offset="0.444662" stop-color="#FB8A2E"/>
+              <stop offset="0.71474" stop-color="#E2425C"/>
+              <stop offset="1" stop-color="#E2425C" stop-opacity="0"/>
+              </radialGradient>
+              <radialGradient id="paint2_radial_87_7153" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(0.500002 3) rotate(-8.1301) scale(38.8909 8.31836)">
+              <stop offset="0.156701" stop-color="#406ADC"/>
+              <stop offset="0.467799" stop-color="#6A45BE"/>
+              <stop offset="1" stop-color="#6A45BE" stop-opacity="0"/>
+              </radialGradient>
+              </defs>
+              </svg>
+            </span></a>
+            <a href="#" ><span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="35" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+              <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+            </svg></span></a>
+            <a href="#" ><span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" fill="red" class="bi bi-youtube" viewBox="0 0 16 16">
+              <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+            </svg></span></a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <h3>Links</h3>
+          <div style="display: grid">
+            <a href="#" class="text-white">Link One</a>
+            <a href="#" class="text-white">Link Two</a>
+            <a href="#" class="text-white">Link Three</a>
+            <a href="#" class="text-white">Link Four</a>
+            <a href="#" class="text-white">Link Five</a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <h3>Subscribe</h3>
+          <p>
+            Join our newsletter to receive updates on new features and releases.
+          </p>
+          <form>
+            <div class="mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Enter your email"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+          <p class="text-muted small">
+            By subscribing, you agree to our Privacy Policy and consent to
+            receive updates from our company.
+          </p>
+        </div>
+      </div>
+      <div class="row text-center py-3">
+        <div class="col">
+          <p class="text-muted mb-0">
+            &copy; 2024 Relume. All rights reserved.
+          </p>
+          <a href="#" class="text-muted ms-3">Privacy Policy</a>
+          <a href="#" class="text-muted ms-3">Terms of Service</a>
+          <a href="#" class="text-muted ms-3">Cookies Settings</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

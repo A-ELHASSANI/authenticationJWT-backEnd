@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
+}
+
+body {
+    background: url(http://wrbbradio.org/wp-content/uploads/2016/10/grey-background-07.jpg) no-repeat center fixed;
+    background-size: cover;
+    font-family: Verdana, sans-serif; /* Apply a consistent font-family */
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #333;
+    color: white;
+    padding: 10px;
+    z-index: 500; /* Lower z-index to ensure form is on top */
+    text-align: center;
+}
+
+.container {
+    background: #2d3e3f;
+    width: 503px;
+	height: 580px;
+    padding: 70px 50px 20px 50px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    z-index: 1000; /* Ensure form is above the navbar */
+}
+
+.fl {
+    float: left;
+    width: 110px;
+    line-height: 35px;
+}
+
+.fontLabel {
+    color: white;
+}
+
+.fr {
+    float: left;
+    width: calc(100% - 130px);
+}
+
+.clr {
+    clear: both;
+}
+
+.box {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.textBox {
+    height: 35px;
+    width: 100%;
+    border: 1px solid #ccc; /* Add a border for better visibility */
+    padding-left: 10px;
+    border-radius: 0 5px 5px 0; /* Match iconBox's border-radius */
+}
+
+.new {
+    float: left;
+    margin-right: 10px;
+}
+
+.iconBox {
+    height: 35px;
+    width: 40px;
+    line-height: 35px;
+    text-align: center;
+    background: #ff6600;
+    border-radius: 5px 0 0 5px;
+}
+
+.radio {
+    color: white;
+    background: #2d3e3f;
+    line-height: 38px;
+}
+
+.terms {
+    line-height: 35px;
+    text-align: center;
+    background: #2d3e3f;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.submit {
+    border: none;
+    color: white;
+    width: 110px;
+    height: 35px;
+    background: #ff6600;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    margin: 20px auto 0; /* Center the button */
+    text-align: center;
+}
+
+.alert {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+/* Additional styling for checkbox */
+.terms input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+a.text-white-50 {
+    color: #ccc; /* Make login link color consistent */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login {
+    text-align: center;
+    margin-top: 20px;
+}

@@ -1,0 +1,13 @@
+User Profile Component: This will display basic information for both the public user and the client user. For the public user, it will primarily show property listings, while for the client user, it will include account details and past transactions.
+
+Agent Dashboard Component: This component will be tailored for agents and will display offers for work opportunities, as well as properties to visit and potentially list.
+
+Admin Dashboard Component: The admin dashboard will provide tools for managing users, including the ability to adjust user roles and permissions.
+
+Property Listing Component: This component will display property listings for both public users and clients to browse.
+
+Client History Component: Specifically for client users, this component will allow them to view their transaction history, including past rentals, purchases, or sales.
+
+Agent Offers Component: This component will show agents the offers they've received for work opportunities in real estate.
+
+Role Management Component: Within the admin dashboard, this component will enable the admin to manage user roles and permissions effectively.
