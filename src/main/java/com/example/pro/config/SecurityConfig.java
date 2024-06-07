@@ -28,26 +28,38 @@ public class SecurityConfig {
     @Autowired
     private JwtAuthFilter authFilter;
 
-    // User Creation
     @Bean
     public UserDetailsService userDetailsService() {
         return new UserInfoService();
     }
 
-    // Configuring HttpSecurity
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        return http.csrf(csrf -> csrf.disable())
-                .authorizeHttpRequests(auth -> auth.requestMatchers("/auth/welcome", "/auth/addNewUser", "/auth/generateToken").permitAll())
+        http
+            .csrf(csrf -> csrf.disable())
+            .authorizeHttpRequests(auth -> auth
+                .requestMatchers(
+                    "/auth/welcome",
+                    "/auth/addNewUser",
+                    "/auth/generateToken",
+                    "/v3/api-docs/**",
+                    "/swagger-ui/**",
+                    "/swagger-ui.html",
+                    "/swagger-resources/**",
+                    "/swagger-resources/configuration/ui",
+                    "/swagger-resources/configuration/security",
+                    "/webjars/**"
+                ).permitAll())
                 .authorizeHttpRequests(auth -> auth.requestMatchers("/auth/user/**").authenticated())
-                .authorizeHttpRequests(auth -> auth.requestMatchers("/auth/admin/**").authenticated())
-                .sessionManagement(sess -> sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                .authenticationProvider(authenticationProvider())
-                .addFilterBefore(authFilter, UsernamePasswordAuthenticationFilter.class)
-                .build();
+				.authorizeHttpRequests(auth -> auth.requestMatchers("/auth/admin/**").authenticated()
+            )
+            .sessionManagement(sess -> sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+            .authenticationProvider(authenticationProvider())
+            .addFilterBefore(authFilter, UsernamePasswordAuthenticationFilter.class);
+
+        return http.build();
     }
 
-    // Password Encoding
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
@@ -65,6 +77,4 @@ public class SecurityConfig {
     public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
         return config.getAuthenticationManager();
     }
-
-
 }
